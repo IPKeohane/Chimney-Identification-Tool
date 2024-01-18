@@ -10,9 +10,9 @@ fp_out = "../data/test_mulitband_out.tif"
 bath_rast = rast(fp_in)
 ###
 
-outRas0 = locNormBathy(bath_rast, ws=31, scale_fact=50) # subtract min within ws and divide by scale fact
+outRas0 = locNormBathy(bath_rast, ws=31, scale_fact=50) # subtract min bathy within window size in pixels (ws=31) and divide by scale factor (50)
 outRas1 = terrain(bath_rast, v="slope", unit="degrees", neighbors=8) # local slope
-outRas2 = bpi(bath_rast, ws_i=3, ws_o=11) # inner radius = 3 pixels, outer radius = 11 pixels
+outRas2 = bpi(bath_rast, ws_i=3, ws_o=11) # bathymetric position index, inner radius = 3 pixels, outer radius = 11 pixels
 
 ###
 outRas = c(outRas0, outRas1/90, outRas2/20)

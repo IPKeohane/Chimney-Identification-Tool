@@ -1,8 +1,9 @@
 ####
 data/
 data/*
-
-
+*.pyc
+rasterFiltering/archive
+rasterFiltering/archive/*
 
 
 ### Python ###
