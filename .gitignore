@@ -1,6 +1,6 @@
 ####
-data/
 data/*
+!data/cit_test_bathy_gsc_ll_1m.tif
 *.pyc
 rasterFiltering/archive
 rasterFiltering/archive/*

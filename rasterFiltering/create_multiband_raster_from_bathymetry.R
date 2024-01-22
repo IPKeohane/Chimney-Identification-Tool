@@ -3,8 +3,8 @@ source("bpi_filter.R")
 source("locally_normalized_bathy_filter.R")
 
 ####
-fp_in  = "../data/gsc_ps2_AUVBath_filled_utm.tif"
-fp_out = "../data/test_mulitband_out.tif"
+fp_in  = "../data/cit_test_bathy_gsc_ll_1m.tif"
+fp_out = "../data/cit_test_mulitbandRaster_gsc_1m.tif"
 
 ####
 bath_rast = rast(fp_in)
@@ -20,3 +20,6 @@ names(outRas) = c("norm_bathy", "slope", "BPI_0311")
 
 writeRaster(outRas, fp_out, overwrite=TRUE)
 
+
+
+bath_rast = project(bath_rast, "epsg:4326")
