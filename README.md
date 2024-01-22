@@ -17,7 +17,7 @@ Keohane I, White S. Chimney Identification Tool for Automated Detection of Hydro
 2. Run *rasterFiltering/create_multiband_raster_from_bathymetry.R* to produce
 a normalized multiband raster derived from the input bathymetry. Make sure to edit
 this file to point to the correct location and filename of the input bathymetry raster.
-3. Run *neuralNet/scripts/runProduceCitOutputs.py* to produce a CSV output of CIT pick
+3. Run *neuralNet/scripts/runProduceCitOutputs.py* to produce a .csv output file of CIT pick
 point locations. Make sure to edit the file so the *fp_in* variable points to
 the multiband raster generated in step 2.
 
