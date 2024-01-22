@@ -11,6 +11,12 @@ chimney edifices from 1m resolution bathymetry. The development process and a mo
 
 Keohane I, White S. Chimney Identification Tool for Automated Detection of Hydrothermal Chimneys from High-Resolution Bathymetry Using Machine Learning. *Geosciences*. 2022; 12(4):176. https://doi.org/10.3390/geosciences12040176
 
+###### General role of each folder
+*src/* contains sourcecode scripts with tools used throughout the CIT.  
+*rasterFiltering/* contains R scripts to filter raw input rasters into the appropriate format.  
+*neuralNet/scripts/* contains Python scripts to train models and produce output picks  
+*neuralNet/models/* contains trained convolutional neural networks   
+*data/* location of input, output, and intermediary data storage
 
 ##### Steps to produce an output of point locations picked by the CIT
 1. Start with a 1m-gridded bathymetry raster. There is an example one located at *data/cit_test_bathy_gsc_ll_1m.tif*
